@@ -11,7 +11,7 @@
     <modules>
         <module>leetcode-trees-graphs</module>
         <module>leetcode-sorting-searching</module>
-        <module>leetcodearraysstrings</module>
+        <module>leetcode-arrays-strings</module>
         <module>leetcode-recursion</module>
         <module>leetcode-dynamic-programming</module>
         <module>leetcode-design</module>
