@@ -1,6 +1,6 @@
 package io.mars.tree.amazon;
 
-import io.mars.tree.datastructure.TreeNode;
+import io.mars.common.datastructure.TreeNode;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

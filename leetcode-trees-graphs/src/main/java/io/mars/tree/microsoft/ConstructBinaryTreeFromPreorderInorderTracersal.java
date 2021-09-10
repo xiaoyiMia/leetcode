@@ -1,6 +1,6 @@
 package io.mars.tree.microsoft;
 
-import io.mars.tree.datastructure.TreeNode;
+import io.mars.common.datastructure.TreeNode;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -25,14 +25,14 @@ import java.util.Queue;
  */
 public class ConstructBinaryTreeFromPreorderInorderTracersal {
   public TreeNode buildTree(int[] preorder, int[] inorder) {
-    if(preorder == null || preorder.length == 0) return null;
+    if (preorder == null || preorder.length == 0) return null;
 
     Queue<Integer> preorderNodes = putInQueue(preorder);
     return constructTree(preorderNodes, inorder, 0, inorder.length - 1);
   }
 
   private TreeNode constructTree(Queue<Integer> preorderNodes, int[] inorder, int leftIndex, int rightIndex) {
-    if(preorderNodes.isEmpty() || leftIndex > rightIndex) return null;
+    if (preorderNodes.isEmpty() || leftIndex > rightIndex) return null;
 
     int position = findNode(inorder, leftIndex, rightIndex, preorderNodes.poll());
     TreeNode node = new TreeNode(inorder[position]);
@@ -51,11 +51,11 @@ public class ConstructBinaryTreeFromPreorderInorderTracersal {
   }
 
   private int findNode(int[] values, int leftIndex, int rightIndex, int target) {
-    while(leftIndex <= rightIndex) {
-      if(values[leftIndex] == target) return leftIndex;
-      if(values[rightIndex] == target) return rightIndex;
-      leftIndex ++;
-      rightIndex --;
+    while (leftIndex <= rightIndex) {
+      if (values[leftIndex] == target) return leftIndex;
+      if (values[rightIndex] == target) return rightIndex;
+      leftIndex++;
+      rightIndex--;
     }
     return -1;
   }

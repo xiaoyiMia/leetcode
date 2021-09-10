@@ -1,6 +1,6 @@
 package io.mars.amazon;
 
-import io.mars.datastructure.ListNode;
+import io.mars.common.datastructure.ListNode;
 
 import java.util.Comparator;
 import java.util.PriorityQueue;

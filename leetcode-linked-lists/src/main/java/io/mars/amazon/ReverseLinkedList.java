@@ -1,8 +1,6 @@
 package io.mars.amazon;
 
-import io.mars.datastructure.ListNode;
-
-import java.util.List;
+import io.mars.common.datastructure.ListNode;
 
 /**
  * Reverse a singly linked list.

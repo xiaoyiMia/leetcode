@@ -1,9 +1,10 @@
 package io.mars.microsoft;
 
-import io.mars.datastructure.ListNode;
+import io.mars.common.datastructure.ListNode;
 
 /**
- * You are given two non-empty linked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
+ * You are given two non-empty linked lists representing two non-negative integers. The most significant digit comes
+ * first and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.
  * <p>
  * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
  * <p>
@@ -73,10 +74,10 @@ public class AddTwoNumbers {
       currentNode = currentNode.next;
 
       longerList = longerList.next;
-      lengthDiff --;
+      lengthDiff--;
     }
 
-    while(longerList != null) {
+    while (longerList != null) {
       currentNode.next = new ListNode(longerList.val + shortList.val);
       currentNode = currentNode.next;
 
@@ -88,7 +89,7 @@ public class AddTwoNumbers {
 
   private void manageCarry(ListNode currentNode) {
     int carry = 0;
-    while(currentNode != null) {
+    while (currentNode != null) {
       int value = currentNode.val + carry;
       currentNode.val = value % 10;
       carry = value / 10;
@@ -127,7 +128,7 @@ public class AddTwoNumbers {
     ListNode currentNode = list;
     ListNode nextNode = currentNode.next;
 
-    while(nextNode != null) {
+    while (nextNode != null) {
       ListNode tempNode = nextNode.next;
       nextNode.next = currentNode;
 
